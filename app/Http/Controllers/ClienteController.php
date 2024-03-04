@@ -9,7 +9,7 @@ class ClienteController extends Controller
 {
     public function showHome()
     {
-        return view('layout');
+        return view('home');
     }
      
     public function showFormularioCadastro(Request $request){
