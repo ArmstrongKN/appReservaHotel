@@ -16,16 +16,16 @@ use App\Http\Controllers\ReservaController;
 |
 */
 
-Route::get('/',[ClienteController::class,'showHome'])->name('home'); 
+Route::get('/', [ClienteController::class,'showHome'])->name('home'); 
 
-Route::get('/cadastro-cliente',[ClienteController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-cliente'); 
-Route::get('/cadastro-cliente',[ClienteController::class,'showFormularioCadastro'])->name('envia-banco-cliente');
- 
-Route::get('/cadastro-funcionario',[FuncionarioController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-funcionario'); 
-Route::get('/cadastro-funcionario',[FuncionarioController::class,'showFormularioCadastro'])->name('envia-banco-funcionario');
+Route::get('/cadastro-cliente', [ClienteController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-cliente'); 
+Route::post('/cadastro-cliente', [ClienteController::class,'cadCliente'])->name('envia-banco-cliente');
 
-Route::get('/cadastro-quarto',[QuartoController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-quarto'); 
-Route::get('/cadastro-quarto',[QuartoController::class,'showFormularioCadastro'])->name('envia-banco-quarto');
+Route::get('/cadastro-funcionario', [FuncionarioController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-funcionario'); 
+Route::post('/cadastro-funcionario', [FuncionarioController::class,'cadFuncionario'])->name('envia-banco-funcionario');
 
-Route::get('/cadastro-reserva',[ReservaController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-reserva'); 
-Route::get('/cadastro-reserva',[ReservaController::class,'showFormularioCadastro'])->name('envia-banco-reserva');
+Route::get('/cadastro-quarto', [QuartoController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-quarto'); 
+Route::post('/cadastro-quarto', [QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
+
+Route::get('/cadastro-reserva', [ReservaController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-reserva'); 
+Route::post('/cadastro-reserva', [ReservaController::class,'cadReserva'])->name('envia-banco-reserva');

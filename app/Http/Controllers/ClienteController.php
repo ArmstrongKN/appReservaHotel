@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\Cliente;
 class ClienteController extends Controller
 {
+    public function showHome()
+    {
+        return view('layout');
+    }
      
     public function showFormularioCadastro(Request $request){
         return view("formularioCadastroCliente");

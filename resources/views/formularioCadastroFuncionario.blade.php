@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <section class="container mt-5">
- <form class="row g-3" method="Post" action="{{route(envia-banco-funcionario')}}">
+<form class="row g-3" method="Post" action="{{ route('envia-banco-funcionario') }}">
 @csrf
   <div class="col-md-12">
     <label for="inputNome" class="form-label">Nome:</label>
@@ -12,8 +12,6 @@
     <label for="inputFuncao" class="form-label">Função:</label>
     <input type="text" class="form-control" id="inputFuncao" placeholder="Dig. sua função">
   </div>
-
- 
 
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Cadastrar</button>

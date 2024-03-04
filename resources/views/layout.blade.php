@@ -25,7 +25,7 @@
             Cliente
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-formulario-cadastro-cliente'}}">Cadastrar</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-cliente') }}">Cadastrar</a></li>
             <li><a class="dropdown-item" href="#">Pesquisar</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Deletar</a></li>
@@ -37,7 +37,7 @@
             Funcionário
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-formulario-cadastro-funcionario'}}">Cadastro</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-funcionario') }}">Cadastro</a></li>
             <li><a class="dropdown-item" href="#">Pesquisar</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Deletar</a></li>
@@ -49,7 +49,7 @@
             Quarto
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-formulario-cadastro-quarto'}}">Cadastro</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-quarto') }}">Cadastro</a></li>
             <li><a class="dropdown-item" href="#">Pesquisar</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Deletar</a></li>
@@ -61,7 +61,7 @@
             Reserva
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-formulario-cadastro-reserva'}}">Cadastro</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-reserva') }}">Cadastro</a></li>
             <li><a class="dropdown-item" href="#">Pesquisar</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Deletar</a></li>
@@ -74,7 +74,7 @@
   </div>
 </nav>
 
-    </heather>
+    </header>
     <main>
         @yield('content')
 
