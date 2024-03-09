@@ -2,70 +2,30 @@
 @section('content')
 <section class="container mt-5">
 <form class="row g-3" method="Post" action="{{ route('envia-banco-quarto') }}">
-    @csrf
+@csrf
   
-
-  <div class="col-md-9">
-    <label for="inputQuarto" class="form-label" id=>Quarto:</label>
-    <input type="text" class="form-control" id="inputQuarto" placeholder="Numero do quarto">
+  <div class="col-md-6">
+    <label for="inputZip" class="form-label">Digite o número do quarto:</label>
+    <input type="text" class="form-control" id="inputNumeroQuarto" name="numero">
   </div>
 
-
-
-  <div class="col-3">
-    <label for="inputTipo" class="form-label">Tipo</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
-  <div class="col-md-4">
-    <label for="inputNome" class="form-label">Digite o número do quarto:</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>c
-  </div>
-
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Tipo:</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Valor da diária:</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Data Entrada:</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Data Saída:</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Situação:</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  
-  <div class="col-md-3">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
+  <div class="col-md-12">
+     
+    <select class="form-select" name="tipo" aria-label="Defalt select example">
+      <option selected>Tipo:</option>
+      <option value="Classe A">Classe A</option>
+      <option value="Comercial">Comercial</option>
+      <option value="Suite">Suite</option>
     </select>
   </div>
 
+  <div class="col-md-3">
+    <label for="inputValorQuarto" class="form-label">Valor:</label>
+    <input type="text" class="form-control" id="inputValorQuarto" name="valor">
+  </div>
+
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
   </div>
 </form>
 </section>

@@ -3,20 +3,20 @@
 @section('content')
 <section class="container mt-5">
     <form class="row g-3" method="post" action="{{ route('envia-banco-reserva') }}">
-        @csrf <!-- Correção: remova as aspas simples ao redor de @csrf -->
+        @csrf  
         <div class="col-md-12">
             <label for="inputNome" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome">
+            <input type="text" class="form-control" id="inputNome" name="nome">
         </div>
 
         <div class="col-md-12">
             <label for="inputEmail" class="form-label">Email:</label>
-            <input type="text" class="form-control" id="inputEmail" placeholder="Digite seu email">
+            <input type="text" class="form-control" id="inputEmail" name="email">
         </div>
 
         <div class="col-3">
-            <label for="inputFone" class="form-label">Fone:</label> <!-- Correção: adicionado ":" após "Fone" -->
-            <input type="text" class="form-control" id="inputCity">
+            <label for="inputFone" class="form-label">Fone:</label>  
+            <input type="text" class="form-control" id="inputFone" name="fone">
         </div>
 
         <div class="col-12">

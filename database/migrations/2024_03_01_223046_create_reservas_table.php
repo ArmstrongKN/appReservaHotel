@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->integer('idcliente');
             $table->integer('idfuncionario');
-            $table->integer('idquarto');
+            $table->integer('numeroquarto');
             $table->enum('situacao', ['pago', 'pendente']);
-            $table->double('valortotal', 8,2);
-            $table->date('dataEntrada');
-            $table->date('dataSaida');
+            $table->decimal('valortotal', 8,2);
+            $table->date('dataentrada');
+            $table->date('datasaida');
+            $table->timestamps();
         });
     }
 
