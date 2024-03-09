@@ -25,11 +25,8 @@
             Cliente
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-cliente') }}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Deletar</a></li>
-            <li><a class="dropdown-item" href="#">Alterar</a></li>
+            <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-cliente') }}">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-cliente') }}">Gerenciar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -38,10 +35,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-funcionario') }}">Cadastro</a></li>
-            <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Deletar</a></li>
-            <li><a class="dropdown-item" href="#">Alterar</a></li>
+          <li><a class="dropdown-item" href="{{ route('gerenciar-funcionario') }}">Gerenciar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -50,10 +44,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-quarto') }}">Cadastro</a></li>
-            <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Deletar</a></li>
-            <li><a class="dropdown-item" href="#">Alterar</a></li>
+          <li><a class="dropdown-item" href="{{ route('gerenciar-quarto') }}">Gerenciar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -62,10 +53,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-reserva') }}">Cadastro</a></li>
-            <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Deletar</a></li>
-            <li><a class="dropdown-item" href="#">Alterar</a></li>
+          <li><a class="dropdown-item" href="{{ route('gerenciar-reserva') }}">Gerenciar</a></li>
           </ul>
         </li>
       </ul>

@@ -20,7 +20,9 @@ class QuartoController extends Controller
             'tipo' => 'string|required',
             'valor' => 'numeric|required'
         ]);
-        
+        public function gerenciarQuarto(){
+            return view('gerenciarQuarto');
+        }
          Quarto::create($dadosValidos);
          return Redirect::route('home');
     }
