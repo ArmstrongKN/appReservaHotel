@@ -8,6 +8,10 @@ use App\Models\Reserva;
 
 class ReservaController extends Controller
 {
+    public function showHome()
+    {
+        return view('home');
+    }
     
     public function showFormularioCadastro(Request $request){
         return view("formularioCadastroReserva");
@@ -26,4 +30,9 @@ class ReservaController extends Controller
         Reserva::create($dadosValidos);
         return Redirect::route('home');
     }
+    public function gerenciarCliente(){
+        return view('gerenciarCliente');
 }
+}
+
+ 

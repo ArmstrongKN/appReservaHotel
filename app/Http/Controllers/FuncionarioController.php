@@ -9,6 +9,11 @@ use App\Models\Funcionario;
 class FuncionarioController extends Controller
 {
      
+    public function showHome()
+    {
+        return view('home');
+    }
+
     public function showFormularioCadastro(Request $request){
         return view("formularioCadastroFuncionario");
     }
@@ -21,4 +26,10 @@ class FuncionarioController extends Controller
         Funcionario::create($dadosValidos);
         return Redirect::route('home');
     }
+
+    public function gerenciarFuncionario(){
+        return view('gerenciarFuncionario');
 }
+}
+
+ 

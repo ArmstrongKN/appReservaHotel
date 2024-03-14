@@ -35,7 +35,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-funcionario') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('gerenciar-funcionario') }}">Gerenciar</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-funcionario') }}">Gerenciar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-quarto') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('gerenciar-quarto') }}">Gerenciar</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-quarto') }}">Gerenciar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -53,7 +53,7 @@
           </a>
           <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-reserva') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('gerenciar-reserva') }}">Gerenciar</a></li>
+          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-reserva') }}">Gerenciar</a></li>
           </ul>
         </li>
       </ul>

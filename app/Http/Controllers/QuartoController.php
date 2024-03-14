@@ -8,22 +8,24 @@ use App\Models\Quarto;
 
 class QuartoController extends Controller
 {
-   
-    public function showFormularioCadastro(Request $request){
-        return view("formularioCadastroQuarto");
+    public function showHome()
+    {
+        return view('home');
     }
 
-    public function cadQuarto(Request $request){
-        
+    public function showFormularioCadastro(Request $request){
         $dadosValidos = $request->validate([
             'numero' => 'integer|required',
             'tipo' => 'string|required',
             'valor' => 'numeric|required'
         ]);
-        public function gerenciarQuarto(){
-            return view('gerenciarQuarto');
-        }
-         Quarto::create($dadosValidos);
-         return Redirect::route('home');
+        Quarto::create($dadosValidos);
+        return Redirect::route('home');
     }
+    public function gerenciarQuarto(){
+        return view('gerenciarQuarto');
+    }
+
 }
+
+ 

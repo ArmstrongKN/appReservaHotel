@@ -1,9 +1,10 @@
 @extends('layout')
 @section('content')
 <section class="container m-5">
-    <h1 class="Text-center">Gerenciar dados do Cliente</h1>
+    <h1 class="text-center">Gerenciar dados do Cliente</h1>
   <div class="container m-5">
-    <form >
+  <form class="row g-3" method="post" action="{{ route('envia-banco-reserva') }}">
+    @csrf 
       <div class="row center">
         <div class="col">
           <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite a Marca" aria-label="First name">
