@@ -15,9 +15,9 @@ class QuartoController extends Controller
 
     public function showFormularioCadastro(Request $request){
         $dadosValidos = $request->validate([
-            'numero' => 'integer|required',
-            'tipo' => 'string|required',
-            'valor' => 'numeric|required'
+            'numeroquarto' => 'integer|required',
+            'tipoquarto' => 'string|required',
+            'valordiaria' => 'numeric|required'
         ]);
         Quarto::create($dadosValidos);
         return Redirect::route('home');

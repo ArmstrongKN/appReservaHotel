@@ -1,5 +1,5 @@
 @extends('layout')
 @section('content')
-<img src="assets/hotelPrincipal.png">
+<img style="width: 100%; height: auto;" src="assets/maldivas.jpg">
 
 @endsection

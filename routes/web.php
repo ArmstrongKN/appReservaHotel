@@ -23,6 +23,12 @@ Route::post('/cadastro-cliente', [ClienteController::class,'cadCliente'])->name(
 Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
 Route::post('/gerenciar-cliente', [ClienteController::class,'cadCliente'])->name('envia-banco-cliente');
 
+Route::get('/gerenciar-cliente', [ClienteController::class,'MostrarGerenciarCliente'])->name('mostrar-cliente');
+Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
+Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
+
+
+
 //Grupo de Funcionario
 Route::get('/cadastro-funcionario', [FuncionarioController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-funcionario'); 
 Route::post('/cadastro-funcionario', [FuncionarioController::class,'cadFuncionario'])->name('envia-banco-funcionario');
