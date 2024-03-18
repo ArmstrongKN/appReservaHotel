@@ -26,22 +26,26 @@
       </tr>
     </thead>
     <tbody>
-     
-      <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+     @foreach($registrosClientes as $registrosClientesLoop)
+        <tr>
+          <th scope="row">{{$registrosClientesLoop->id}}</th>
+          <td>{{$registrosClientesLoop->nome}}</td>
+          <td>{{$registrosClientesLoop->email}}</td>
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
-        xx
+        
         <td>
-         xxx
+            <form method="POST" action="{{route('apaga-cliente,$registrosClientesLoop->id')}}">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger"> X </button>
+         </form>
         </td>
       </tr>
-   
+   @endforeach
     </tbody>
   </table>
 </section>

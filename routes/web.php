@@ -5,44 +5,37 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ReservaController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+ 
 
 Route::get('/', [ClienteController::class,'showHome'])->name('home'); 
 //Grupo de Cliente
 Route::get('/cadastro-cliente', [ClienteController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-cliente'); 
 Route::post('/cadastro-cliente', [ClienteController::class,'cadCliente'])->name('envia-banco-cliente');
-Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
-Route::post('/gerenciar-cliente', [ClienteController::class,'cadCliente'])->name('envia-banco-cliente');
-
-Route::get('/gerenciar-cliente', [ClienteController::class,'MostrarGerenciarCliente'])->name('mostrar-cliente');
-Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
-Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name('show-formulario-gerenciar-cliente');
-
-
+Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name( 'gerenciar-cliente');
+Route::post('/alterar-cliente', [ClienteController::class,'mostrarGerenciarClienteId'])->name('mostrar-cliente');
+Route::get('/alterar-cliente/{id}', [ClienteController::class,'alterarClienteBanco'])->name('alterar-cliente');
+Route::get('/apaga-cliente/{id}', [ClienteController::class,'destroy'])->name('apaga-cliente');
 
 //Grupo de Funcionario
 Route::get('/cadastro-funcionario', [FuncionarioController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-funcionario'); 
 Route::post('/cadastro-funcionario', [FuncionarioController::class,'cadFuncionario'])->name('envia-banco-funcionario');
-Route::get('/gerenciar-funcionario', [FuncionarioController::class,'gerenciarFuncionario'])->name('show-formulario-gerenciar-funcionario');
-Route::post('/gerenciar-funcionario', [FuncionarioController::class,'cadFuncionario'])->name('envia-banco-funcionario');
+Route::get('/gerenciar-funcionario', [FuncionarioController::class,'gerenciarFuncionario'])->name('gerenciar-funcionario');
+Route::post('/gerenciar-funcionario', [FuncionarioController::class,'mostrarGerenciarFuncionarioId'])->name('mostrar-funcionario');
+Route::get('/gerenciar-funcionario', [FuncionarioController::class,'alterarFuncionarioBanco'])->name('alterar-funcionario');
+Route::post('/gerenciar-funcionario', [FuncionarioController::class,'destroy'])->name('apaga-funcionario');
 
 //Grupo de Quarto
 Route::get('/cadastro-quarto', [QuartoController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-quarto'); 
 Route::post('/cadastro-quarto', [QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
-Route::get('/gerenciar-quarto', [QuartoController::class,'gerenciarQuarto'])->name('show-formulario-gerenciar-quarto');
-Route::post('/gerenciar-quarto', [QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
+Route::get('/gerenciar-quarto', [QuartoController::class,'gerenciarQuarto'])->name('gerenciar-quarto');
+Route::post('/gerenciar-quarto', [QuartoController::class,'mostrarGerenciarQuartoId'])->name('mostrar-quarto');
+Route::get('/gerenciar-quarto', [QuartoController::class,'alterarQuartoBanco'])->name('alterar-quarto');
+Route::post('/gerenciar-quarto', [QuartoController::class,'destroy'])->name('apaga-quarto');
 
 //Grupo de Reserva
 Route::get('/cadastro-reserva', [ReservaController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-reserva'); 
 Route::post('/cadastro-reserva', [ReservaController::class,'cadReserva'])->name('envia-banco-reserva');
-Route::get('/gerenciar-reserva', [ReservaController::class,'gerenciarReserva'])->name('show-formulario-gerenciar-reserva');
-Route::post('/gerenciar-reserva', [ReservaController::class,'cadReserva'])->name('envia-banco-reserva');
+Route::get('/gerenciar-reserva', [ReservaController::class,'gerenciarReserva'])->name('gerenciar-reserva');
+Route::post('/gerenciar-reserva', [ReservaController::class,'mostrarGerenciarReservaId'])->name('mostrar-reserva');
+Route::get('/gerenciar-reserva', [ReservaController::class,'alterarReservaBanco'])->name('alterar-reserva');
+Route::post('/gerenciar-reserva', [ReservaController::class,'destroy'])->name('apaga-reserva');
