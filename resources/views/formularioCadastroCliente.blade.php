@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="container mt-5">
-    <form class="row g-3" method="post" action="{{ route('envia-banco-reserva') }}">
+    <form class="row g-3" method="post" action="{{ route('envia-banco-cliente') }}">
         @csrf  
         <div class="col-md-12">
             <label for="inputNome" class="form-label">Nome:</label>

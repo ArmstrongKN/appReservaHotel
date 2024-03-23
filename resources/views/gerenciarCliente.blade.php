@@ -3,7 +3,7 @@
 <section class="container m-5">
     <h1 class="text-center">Gerenciar dados do Cliente</h1>
   <div class="container m-5">
-  <form class="row g-3" method="post" action="{{ route('envia-banco-reserva') }}">
+  <form class="row g-3" method="post" action="{{ route('gerenciar-cliente') }}">
     @csrf 
       <div class="row center">
         <div class="col">
@@ -38,7 +38,7 @@
         </td>
         
         <td>
-            <form method="POST" action="{{route('apaga-cliente,$registrosClientesLoop->id')}}">
+        <form method="post" action="{{route('apaga-cliente', $registrosClientesLoop)}}">
             @method('delete')
             @csrf
             <button type="submit" class="btn btn-danger"> X </button>

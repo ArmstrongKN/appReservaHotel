@@ -24,37 +24,40 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Cliente
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-cliente') }}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-cliente') }}">Gerenciar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Funcionário
-          </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-funcionario') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-funcionario') }}">Gerenciar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Quarto
-          </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-quarto') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-quarto') }}">Gerenciar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Reserva
-          </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="{{ route('show-formulario-cadastro-reserva') }}">Cadastro</a></li>
-          <li><a class="dropdown-item" href="{{ route('show-formulario-gerenciar-reserva') }}">Gerenciar</a></li>
-          </ul>
+                        <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="{{'/cadastro-cliente'}}">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="{{'/gerenciar-cliente'}}">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Funcionario
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{'/cadastro-funcionario'}}">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="{{'/gerenciar-funcionario'}}">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Quarto
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{'/cadastro-quarto'}}">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="{{'/gerenciar-quarto'}}">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Reserva
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{'/cadastro-reserva'}}">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="{{'/gerenciar-reserva'}}">Gerenciar</a></li>
+                        </ul>
         </li>
       </ul>
  

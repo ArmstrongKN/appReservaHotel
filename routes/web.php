@@ -14,7 +14,7 @@ Route::post('/cadastro-cliente', [ClienteController::class,'cadCliente'])->name(
 Route::get('/gerenciar-cliente', [ClienteController::class,'gerenciarCliente'])->name( 'gerenciar-cliente');
 Route::post('/alterar-cliente', [ClienteController::class,'mostrarGerenciarClienteId'])->name('mostrar-cliente');
 Route::get('/alterar-cliente/{id}', [ClienteController::class,'alterarClienteBanco'])->name('alterar-cliente');
-Route::get('/apaga-cliente/{id}', [ClienteController::class,'destroy'])->name('apaga-cliente');
+Route::delete('/apaga-cliente/{id}', [ClienteController::class,'destroy'])->name('apaga-cliente');
 
 //Grupo de Funcionario
 Route::get('/cadastro-funcionario', [FuncionarioController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-funcionario'); 
@@ -22,7 +22,7 @@ Route::post('/cadastro-funcionario', [FuncionarioController::class,'cadFuncionar
 Route::get('/gerenciar-funcionario', [FuncionarioController::class,'gerenciarFuncionario'])->name('gerenciar-funcionario');
 Route::post('/gerenciar-funcionario', [FuncionarioController::class,'mostrarGerenciarFuncionarioId'])->name('mostrar-funcionario');
 Route::get('/gerenciar-funcionario', [FuncionarioController::class,'alterarFuncionarioBanco'])->name('alterar-funcionario');
-Route::post('/gerenciar-funcionario', [FuncionarioController::class,'destroy'])->name('apaga-funcionario');
+Route::delete('/gerenciar-funcionario', [FuncionarioController::class,'destroy'])->name('apaga-funcionario');
 
 //Grupo de Quarto
 Route::get('/cadastro-quarto', [QuartoController::class,'showFormularioCadastro'])->name('show-formulario-cadastro-quarto'); 
