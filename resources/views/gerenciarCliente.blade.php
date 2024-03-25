@@ -28,9 +28,11 @@
     <tbody>
      @foreach($registrosClientes as $registrosClientesLoop)
         <tr>
+
           <th scope="row">{{$registrosClientesLoop->id}}</th>
           <td>{{$registrosClientesLoop->nome}}</td>
           <td>{{$registrosClientesLoop->email}}</td>
+          
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>

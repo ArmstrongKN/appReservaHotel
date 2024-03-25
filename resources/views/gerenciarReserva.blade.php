@@ -33,11 +33,13 @@
     @foreach($registrosReservas as $registrosReservasLoop)
       <tr>
       <th scope="row">{{$registrosReservasLoop->id}}</th>
+
           <td>{{$registrosReservasLoop->numeroquarto}}</td>
           <td>{{$registrosReservasLoop->situacao}}</td>
           <td>{{$registrosReservasLoop->valortotal}}</td>
           <td>{{$registrosReservasLoop->dataentrada}}</td>
           <td>{{$registrosReservasLoop->datasaida}}</td>
+          
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
