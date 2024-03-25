@@ -4,7 +4,7 @@
 <h1 class="text-center">Gerenciar dados do Quarto</h1>
   <div class="container m-5">
       
-  <form class="row g-3" method="post" action="{{ route('gerenciar-quarto') }}">
+  <form class="row g-3" method="GET" action="{{ route('gerenciar-quarto') }}">
     @csrf 
       <div class="row center">
         <div class="col">

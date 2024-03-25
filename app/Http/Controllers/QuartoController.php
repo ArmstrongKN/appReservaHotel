@@ -33,8 +33,8 @@ class QuartoController extends Controller
 
     public function gerenciarQuarto(Request $request){
         $dadosQuarto = Quarto::query();
-        $dadosQuarto->when($request->nome,function($query,$valor){
-        $query->where('nome','like','%'.$valor.'%');
+        $dadosQuarto->when($request->numeroquarto,function($query,$valor){
+        $query->where('numeroquarto','like','%'.$valor.'%');
         });
         $dadosQuarto = $dadosQuarto->get();
         return view('gerenciarQuarto',['registrosQuartos' => $dadosQuarto]);
