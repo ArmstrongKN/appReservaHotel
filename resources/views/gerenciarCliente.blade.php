@@ -7,7 +7,7 @@
     @csrf 
       <div class="row center">
         <div class="col">
-          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite a Marca" aria-label="First name">
+          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome" aria-label="First name">
         </div>
         <div class="col">
           <button type="submit" class="btn btn-info">Buscar</button>

@@ -3,7 +3,9 @@
 <section class="container m-5">
 <h1 class="Text-center">Gerenciar dados do Funcionario</h1>
   <div class="container m-5">
-    <form >
+     
+  <form class="row g-3" method="post" action="{{ route('gerenciar-funcionario') }}">
+  @csrf 
       <div class="row center">
         <div class="col">
           <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome do funcionario" aria-label="First name">
@@ -26,21 +28,26 @@
     </thead>
     <tbody>
      
+       
+    @foreach($registrosFuncionarios as $registrosFuncionariosLoop)
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosFuncionariosLoop->id}}</th>
+        <td>{{$registrosFuncionariosLoop->nome}}</td>
+        <td>{{$registrosFuncionariosLoop->funcao}}</td>
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
-        xx
         <td>
-         xxx
+        <form method="post" action="{{route('apaga-funcionario', $registrosFuncionariosLoop)}}">
+        @method('delete')
+        @csrf
+        <button type="submit" class="btn btn-danger"> X </button>
+         </form>
         </td>
       </tr>
-   
+      @endforeach
     </tbody>
   </table>
 </section>

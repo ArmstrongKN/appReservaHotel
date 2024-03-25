@@ -25,33 +25,36 @@
     <input type="email" class="form-control" id="inputNomeCliente" readonly nome="nomecliente">
   </div>
 
-  <div class="col-md-2">
+  <div class="col-md-4">
     <label for="inputCodigoQuarto" class="form-label">Digite o numero do quarto:</label>
     <input type="text" class="form-control" id="inputNumeroQuarto" name="numeroquarto">
   </div>
 
-  
   <div class="col-md-4">
-    <label for="inputTipoQuarto" class="form-label">Tipo:</label>
-    <input type="text" class="form-control" id="inputTipoQuarto" readonly name=" tipoquarto">
-  </div> 
-
+     <select class="form-select" name="tipoquarto" aria-label="Defalt select example">
+       <option selected>Tipo:</option>
+       <option value="Classe A">Classe A</option>
+       <option value="Comercial">Comercial</option>
+       <option value="Suite">Suite</option>
+     </select>
+   </div>
+  
   <div class="col-md-4">
     <label for="inputTipoQuarto" class="form-label"> Valor da Diária:</label>
     <input type="text" class="form-control" id="inputValorDiaria" readonly name="valordiaria">
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <label for="inputValorDiaria" class="form-label"> Data da Entrada:</label>
     <input type="date" class="form-control" id="inputDataEntrada"  name="dataentrada">
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <label for="inputDataSaida" class="form-label">Data de Saída:</label>
     <input type="date" class="form-control" id="inputDataSaida"  name="datasaida">
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <label for="inputValorTotal" class="form-label">Valor Total:</label>
       <div class="input-group md-3">
         <span class="input-group-text">R$</span>

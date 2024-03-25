@@ -12,8 +12,12 @@ class QuartoController extends Controller
     {
         return view('home');
     }
-
+         
     public function showFormularioCadastro(Request $request){
+        return view("formularioCadastroQuarto");
+    }
+
+    public function cadQuarto(Request $request){
         $dadosValidos = $request->validate([
             'numeroquarto' => 'integer|required',
             'tipoquarto' => 'string|required',
@@ -22,10 +26,39 @@ class QuartoController extends Controller
         Quarto::create($dadosValidos);
         return Redirect::route('home');
     }
-    public function gerenciarQuarto(){
-        return view('gerenciarQuarto');
+    public function mostrarGerenciarQuartoId(Quarto $id){
+        return view('xxxxxxxx',['registroQuartos' => $id]);
     }
 
+
+    public function gerenciarQuarto(Request $request){
+        $dadosQuarto = Quarto::query();
+        $dadosQuarto->when($request->nome,function($query,$valor){
+        $query->where('nome','like','%'.$valor.'%');
+        });
+        $dadosQuarto = $dadosQuarto->get();
+        return view('gerenciarQuarto',['registrosQuartos' => $dadosQuarto]);
+    }
+    
+    public function destroy(Quarto $id){
+        $id->delete();
+        return Redirect::route('home');
+  }
+  public function alterarQuartoBanco(Quarto $id,Request $request){
+    $dadosValidos = $request->validate([
+        'numeroquarto' => 'integer|required',
+        'tipoquarto' => 'string|required',
+        'valordiaria' => 'numeric|required'
+    ]);
+    $id->fill($dadosValidos);
+    $id->save();
+    return Redirect::route('home');
 }
+}
+ 
+
+   
+
+  
 
  

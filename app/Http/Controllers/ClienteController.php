@@ -28,10 +28,19 @@ class ClienteController extends Controller
         Cliente::create($dadosValidos);
         return Redirect::route('home');
     }
-
-    public function mostrarGerenciarClienteId(Cliente $id){
-        return view('xxxxxxxx',['registroClientes' => $id]);
+    
+    public function mostrarGerenciarClienteId($id) {
+        $cliente = Cliente::find($id);
+    
+        if ($cliente) {
+            return view('xxxxxxxx', ['registroClientes' => $cliente]);
+        } else {
+            return redirect()->back()->with('error', 'Cliente não encontrado.');
+        }
     }
+    
+    
+  
 
     public function gerenciarCliente(Request $request){
         $dadosCliente = Cliente::query();
