@@ -33,7 +33,7 @@ class ClienteController extends Controller
         $cliente = Cliente::find($id);
     
         if ($cliente) {
-            return view('xxxxxxxx', ['registroClientes' => $cliente]);
+            return view('formularioCadastroCliente', ['registroClientes' => $cliente]);
         } else {
             return redirect()->back()->with('error', 'Cliente não encontrado.');
         }

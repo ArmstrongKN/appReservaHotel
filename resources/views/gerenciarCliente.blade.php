@@ -3,7 +3,7 @@
 <section class="container m-5">
     <h1 class="text-center">Gerenciar dados do Cliente</h1>
   <div class="container m-5">
-  <form class="row g-3" method="post" action="{{ route('gerenciar-cliente') }}">
+  <form class="row g-3" method="GET" action="{{route('gerenciar-cliente')}}">
     @csrf 
       <div class="row center">
         <div class="col">
