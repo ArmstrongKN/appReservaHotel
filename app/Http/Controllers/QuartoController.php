@@ -27,7 +27,7 @@ class QuartoController extends Controller
         return Redirect::route('home');
     }
     public function mostrarGerenciarQuartoId(Quarto $id){
-        return view('xxxxxxxx',['registroQuartos' => $id]);
+        return view('formularioAlterarQuarto',['registroQuartos' => $id]);
     }
 
 

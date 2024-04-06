@@ -35,7 +35,7 @@
           <td>{{$registrosQuartosLoop->tipoquarto}}</td>
           <td>{{$registrosQuartosLoop->valordiaria}}</td>
         <td>
-          <a href="">
+          <a href="{{route('mostrar-quarto',$registrosQuartosLoop->id)}}">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
@@ -55,7 +55,7 @@
 
 @endsection
  
-    
+ 
   
      
  

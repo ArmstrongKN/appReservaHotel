@@ -35,7 +35,7 @@
         <td>{{$registrosFuncionariosLoop->nome}}</td>
         <td>{{$registrosFuncionariosLoop->funcao}}</td>
         <td>
-          <a href="">
+          <a href="{{route('mostrar-funcionario',$registrosFuncionariosLoop->id)}}">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
@@ -53,3 +53,4 @@
 </section>
 
 @endsection
+ 

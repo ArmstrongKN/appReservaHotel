@@ -34,13 +34,13 @@
           <td>{{$registrosClientesLoop->email}}</td>
           
         <td>
-          <a href="">
+          <a href="{{route('mostrar-cliente',$registrosClientesLoop->id)}}">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
         
         <td>
-        <form method="post" action="{{route('apaga-cliente', $registrosClientesLoop)}}">
+        <form method="post" action="{{route('apaga-cliente', $registrosClientesLoop->id)}}">
             @method('delete')
             @csrf
             <button type="submit" class="btn btn-danger"> X </button>
